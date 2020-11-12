@@ -61,3 +61,8 @@ image::image4.png[The filter has been created]
 
 .Step 5: Access "Discover" section to retrieve the logs
 image::image5.png[Access "Discover" section to retrieve the logs]
+
+
+== References
+
+For additional information, check the https://docs.openshift.com/container-platform/4.5/logging/cluster-logging-upgrading.html#cluster-logging-visualizer-indices_cluster-logging-upgrading[link] to Openshift documentation.
