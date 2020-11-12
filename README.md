@@ -1,1 +1,0 @@
-# ocp-kibana-config

@@ -1,0 +1,63 @@
+= OCP Kibana configuration
+Álvaro López Medina <alopezme@redhat.com>
+v1.0, 2020-11
+// Create TOC wherever needed
+:toc: macro
+:sectanchors:
+:sectnumlevels: 2
+:sectnums: 
+:source-highlighter: pygments
+:imagesdir: images
+// Start: Enable admonition icons
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[]
+:icons: font
+endif::[]
+// End: Enable admonition icons
+
+// Create the Table of contents here
+toc::[]
+
+== Creating Kibana index pattern
+
+The first time that a user accesses Kibana, it will show the following message:
+
+    In order to visualize and explore data in Kibana, you'll need to create an index pattern to retrieve data from Elasticsearch.
+
+
+To define index patterns and create visualizations in Kibana:
+
+1. In the OpenShift Container Platform console, click the Application Launcher app launcher and select Logging.
+
+2. Create your Kibana index patterns by clicking `Management` → `Index Patterns` → `Create index pattern`:
+
+* Users must manually create index patterns to see logs for their projects. Users should create a new index pattern named `app` and use the `@timestamp` time field to view their container logs.
+
+* Admin users must create index patterns for the app, `infra`, and `audit` indices using the `@timestamp` time field.
+
+3. Create Kibana Visualizations from the new index patterns.
+
+
+== Step by step process
+
+.Step 1: Access the management section
+image::image1.png[Access the management section]
+
+
+.Step 2: Define your index pattern
+image::image2.png[Define your index pattern]
+
+.Step 3: Configure the time filter
+image::image3.png[Configure the time filter]
+
+.Step 4: The filter has been created
+image::image4.png[The filter has been created]
+
+.Step 5: Access "Discover" section to retrieve the logs
+image::image5.png[Access "Discover" section to retrieve the logs]
